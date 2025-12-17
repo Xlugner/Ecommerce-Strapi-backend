@@ -461,6 +461,35 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiHeroSectionHeroSection extends Struct.SingleTypeSchema {
+  collectionName: 'hero_sections';
+  info: {
+    displayName: 'Hero Section';
+    pluralName: 'hero-sections';
+    singularName: 'hero-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    images: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::hero-section.hero-section'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
@@ -1044,6 +1073,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::category.category': ApiCategoryCategory;
+      'api::hero-section.hero-section': ApiHeroSectionHeroSection;
       'api::product.product': ApiProductProduct;
       'api::store-config.store-config': ApiStoreConfigStoreConfig;
       'plugin::content-releases.release': PluginContentReleasesRelease;
