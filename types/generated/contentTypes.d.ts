@@ -433,7 +433,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
   collectionName: 'categories';
   info: {
-    displayName: 'category';
+    displayName: 'categor\u00EDas';
     pluralName: 'categories';
     singularName: 'category';
   };
@@ -464,7 +464,7 @@ export interface ApiCategoryCategory extends Struct.CollectionTypeSchema {
 export interface ApiHeroSectionHeroSection extends Struct.SingleTypeSchema {
   collectionName: 'hero_sections';
   info: {
-    displayName: 'Hero Section';
+    displayName: 'Imagenes Portada';
     pluralName: 'hero-sections';
     singularName: 'hero-section';
   };
@@ -493,7 +493,7 @@ export interface ApiHeroSectionHeroSection extends Struct.SingleTypeSchema {
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
-    displayName: 'product';
+    displayName: 'productos';
     pluralName: 'products';
     singularName: 'product';
   };
@@ -531,7 +531,7 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
 export interface ApiStoreConfigStoreConfig extends Struct.SingleTypeSchema {
   collectionName: 'store_configs';
   info: {
-    displayName: 'store-config';
+    displayName: 'Informacion de la Tienda';
     pluralName: 'store-configs';
     singularName: 'store-config';
   };
