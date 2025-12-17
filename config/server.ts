@@ -11,5 +11,14 @@ module.exports = ({ env }) => ({
     origin: ['https://ecommerce-strapi-frontend.vercel.app', 'http://localhost:4321'],
     credentials: true,
   },
+  routes: {
+    security: {
+      cors: {
+        enabled: true,
+        origin: ['https://ecommerce-strapi-frontend.vercel.app', 'http://localhost:4321'],
+        credentials: true,
+      },
+    },
+  },
 });
 
