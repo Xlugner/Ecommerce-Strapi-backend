@@ -4,7 +4,7 @@
   "info": {
     "singularName": "store-config",
     "pluralName": "store-configs",
-    "displayName": "store-config"
+    "displayName": "Informacion de la Tienda"
   },
   "options": {
     "draftAndPublish": true
